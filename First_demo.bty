@@ -1,0 +1,27 @@
+NUM REG1,i
+OP REG1=-1
+OP i=3
+OP REG1=REG1*2
+OP i=i-1
+IF i>0
+JMP -3
+JMP 18
+# 如果执行到了空行，则指针自动+1
+
+OP REG1+2
+OP REG1=ANS*ANS
+
+PRT REG1
+END 0
+
+# 一个实现REG1反转3次的代码块
+OP i=i+1
+OP REG1=-REG1
+IF i<3
+JMP +2
+JMP -4
+JMP 10
+
+
+
+# 程序最后输出为 64
